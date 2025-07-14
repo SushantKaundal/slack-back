@@ -17,8 +17,10 @@ app.use(cors({
 app.use(express.json());
 app.use("/api", Routes);
 app.get('/', (req, res) => {
+  console.log('✅ / route was hit');
   res.send('Backend is working!');
 });
+
 
 
 setupSocket(server);
